@@ -1,0 +1,55 @@
+
+html, body {
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	height: 100%;
+}
+
+
+
+main {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+section {
+	padding: 1em;
+}
+.development-mode a:empty {
+	background-color: rgba(133, 133, 254, 0.4);
+	border: 1px solid rgba(37, 37, 117, 0.5);
+}
+
+a {
+	text-decoration: none;
+}
+
+
+button {
+    font-size: 1.5em;
+}
+
+
+input[type=range] {
+    width: 100%;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    height: 1em;
+    width: 5em;
+}
+input[type=range]::-webkit-slider-thumb {
+    width: 1.5em;
+    height: 1.5em;
+}
+
+waxml-midi-controller {
+	width: 100% !important;
+}
+
+footer {
+    position: fixed;
+    bottom: 0px;
+}

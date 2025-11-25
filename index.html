@@ -1,0 +1,108 @@
+<!doctype html>
+<html data-bs-theme="dark">
+	<head>
+		<link rel="apple-touch-icon" href="apple-touch-icon.png"/>
+		<link rel="icon" type="image/x-icon" href="favicon.ico">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="mobile-web-app-capable" content="yes">
+		
+		
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+		
+		<!-- <link href="plugins/bootstrap.min.css" rel="stylesheet">
+		<script src="plugins/bootstrap.bundle.min.js"></script> -->
+		<link href="fonts.css" rel="stylesheet" type="text/css" />
+		<link href="style.css" rel="stylesheet" type="text/css" />
+
+		<title>Random Sonic Generator</title>
+	</head>
+
+
+	<body class="development-mode">
+
+		<main class="xmax-size">
+
+			
+			<section id="startpage">
+				
+				<h1 class="text-center"><img class="width-7" src="images/logga.png" />RSG</h1>
+								
+				<waxml-midi-controller id="key-selector" type="keyboard" keymode="toggle" width="400" height="100" min="48" max="72" selectedColor="#0d6efd" activeColor="#0d6efd" ></waxml-midi-controller>
+
+
+				<div id="settings" class="mt-4">
+
+					<div class="input-group mb-4">
+						<label class="input-group-text h4" for="scale-select">Scale: </label>
+						<select id="scale-select" class="form-select  h4">
+							<option selected value="0,2,4,5,7,9,11">Major</option>
+							<option value="0,2,3,5,7,8,10">Minor</option>
+							<option value="0,2,4,7,9">Pentatonic major</option>
+							<option value="0,3,5,7,10">Pentatonic minor</option>
+							<option value="0,1,2,3,4,5,6,7,8,9,10,11">Chromatic</option>
+						</select>
+					</div>
+					
+					<label class="container-fluid h4">Tempo: <span>40</span>
+						<input 
+						id="tempo-slider"
+						type="range" 
+						class="form-range mt-4 mb-4" 
+						min="40" max="250" 
+						value="40"
+						data-waxml-input-set="$tempo=this.value" />
+					</label>
+
+					<label class="container-fluid h4">Notes: <span>1</span>
+						<input 
+						id="notes-slider" 
+						type="range" 
+						class="form-range mt-4 mb-4" 
+						min="1" max="5"
+						value="1" />
+					</label>
+
+					<label class="container-fluid h4">Repeat: <span>1</span>
+						<input 
+						id="repeat-slider"
+						type="range" 
+						class="form-range mt-4 mb-4" 
+						min="1" max="5" 
+						value="1"
+						data-waxml-input-set="$repeat=this.value" />
+					</label>
+
+				</div>
+
+				<div id="controls">
+					<button id="play-btn" class="btn btn-outline-primary bi-play-fill btn-lg"></button>
+				</div>
+				
+					
+				
+			</section>
+			
+
+		</main>
+
+
+    
+
+		<footer class="container-fluid text-bg-dark mt-2 p-1 small text-center">
+		Product Manager: Håkan Goohde, Development: Hans Lindetorp, Version: 2.0
+		</footer>
+
+
+		<script src="plugins/max.size.js"></script>
+		<script src="plugins/WebAudioXML.js" data-source="audio.xml" data-music-structure="music.xml"></script>
+		<script src="plugins/script.js"></script>
+		<script src="music.js"></script>
+		<script src="myscript.js"></script>
+
+
+	</body>
+</html>
